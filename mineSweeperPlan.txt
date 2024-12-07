@@ -1,0 +1,34 @@
+What is needed: 
+- boards 
+    array, and if there is a mine the value stored should be 1 
+    so when checking if there is a mine, array = 1 = mine 
+- moves
+- minesLocations  
+- checkMines() --> check rather player input has mine  
+- validMove() --> check rather the corrdinate inputed is within the board
+- mineCount() --> number of mines in it's surroundings (checking all 8 directions)
+    count number of 1 around the location 
+- playUntil() --> game ends when player select corrdinate of mine or when all mines are selected 
+- when game starts mine should be placed in random locations 
+- levels() --> selection of level Beginner, Intermediate or Advanced (board size is set based on the level of difficulty and so is number of mines)
+    random thought: what if we can do grind size as one and the level of difficulty for each based on the number of mines there are 
+                    - so player would chose the grind size and then if they chose advanced there would be more mines and if they chose beginner 
+                      there's less 
+
+how to put down flags? 
+
+playMineSweeper() --> where player chose the level
+Level() --> when a level is chosen by the player differnet map show up 
+
+Class: 
+Board 
+    myBoard(): players board 
+        keep track of where they clicked 
+        store the new values for the board (mine numbers etc) 
+        different array 
+
+    actualBoard(): the actual board 
+        keep track of where all the mine are 
+
+Game 
+    gameLevel 
