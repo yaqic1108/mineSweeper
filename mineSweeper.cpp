@@ -6,15 +6,23 @@ using namespace std;
 int SIZE; 
 int MINES; 
 
+bool validMove(int x, int y){
+    if(x <= SIZE || y <= SIZE){
+        return true; 
+    }else{
+        return false; 
+    }
+}
+
 class Board{
     public:
         // char board[SIZE][SIZE]; 
 
         Board(){
             // char board[SIZE][SIZE];  //char** is used to create a 2D array of characters 
-            board = new char*[SIZE]; 
+            char** board = new char*[SIZE]; 
             for (int i = 0; i < SIZE; i++){
-                // board[i] = new char[SIZE]; 
+                board[i] = new char[SIZE]; 
                 for (int j = 0; j < SIZE; j++){
                     board[i][j] = '-'; 
                 }
@@ -32,7 +40,8 @@ class Board{
                 int x = rand() % SIZE; 
                 int y = rand() % SIZE; 
                 if (board[x][y] != '*'){
-
+                    board[x][y] = '*';
+                    mines++; 
                 }
             }
         }
