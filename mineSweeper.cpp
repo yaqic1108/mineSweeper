@@ -64,7 +64,7 @@ void chosedifficulty(){
         MINES = 10; 
     }
 }
-sdfsdfadf
+
 int main(){
 
 }
