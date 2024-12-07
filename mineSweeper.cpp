@@ -69,8 +69,16 @@ void chosedifficulty(){
     cin >> difficultyLevel;
     
     if (difficultyLevel == 1){
-        SIZE = 10; 
+        SIZE =  9; 
         MINES = 10; 
+    }
+    if (difficultyLevel == 2){
+        SIZE = 16; 
+        MINES = 40; 
+    }
+    if (difficultyLevel == 3){
+        SIZE = 24; 
+        MINES = 99; 
     }
 }
 
